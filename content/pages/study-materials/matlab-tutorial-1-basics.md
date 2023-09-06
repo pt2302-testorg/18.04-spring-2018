@@ -349,49 +349,55 @@ ans =
      182.32  185.04
  ```
 
-`% See what happens if the matrix is not square.`
+```
+% See what happens if the matrix is not square.
 
-> `> B = [1, 2, 3; 4, 5, 6]
-> B =
->     1  2  3
->     4  5  6`
->
-> `> B^2`
+> B = [1, 2, 3; 4, 5, 6]
+B =
+     1  2  3
+     4  5  6
 
-`% My version of MATLAB produces the following error message.`
+> B^2
+
+% My version of MATLAB produces the following error message.
 
 Error using ^
 Inputs must be a scalar and a square matrix.
 To compute elementwise POWER, use POWER (.^) instead.
+```
 
 Elementwise Arithmetic
 ----------------------
 
 Sometimes you want to raise each element of an array to a power. The notation is a bit odd: it requires a period before the caret.
 
-`% Notice the '.' before the '^'.`
+```
+% Notice the '.' before the '^'.
 
-> `> x = [1 2 3; 4 5 6]
-> x =
->     1  2  3
->     4  5  6`
->
-> `> x.^2
-> ans =
->      1   4   9
->     16  25  36`
->
-> `> x.^0.5
-> ans =
->     1.0000  1.4142  1.7321
->     2.0000  2.2361  2.4495`
+> x = [1 2 3; 4 5 6]
+ x =
+     1  2  3
+     4  5  6
 
-`% The same notation works to multiply each element of an array by the same element in another array.`
+> x.^2
+ ans =
+      1   4   9
+     16  25  36
 
-> `> [1, 2, 3; 4, 5, 6] .* [2, 4, 6; 8, 10, 12]
+> x.^0.5
+ ans =
+     1.0000  1.4142  1.7321
+     2.0000  2.2361  2.4495
+```
+
+```
+% The same notation works to multiply each element of an array by the same element in another array.
+
+> [1, 2, 3; 4, 5, 6] .* [2, 4, 6; 8, 10, 12]
 > ans =
->      2   8  18
->     32  50  72`
+      2   8  18
+     32  50  72
+```
 
 `% Also to raise each element of an array to the same element in another array.`
 
