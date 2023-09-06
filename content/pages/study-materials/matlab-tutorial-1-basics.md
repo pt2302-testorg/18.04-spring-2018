@@ -53,7 +53,8 @@ _Command lines_ begin with a '>'. When copying a command you should enter everyt
 MATLAB as a Calculator
 ----------------------
 
-```% The basic operations are *, +, -, /, ^. Try the following:
+```
+% The basic operations are *, +, -, /, ^. Try the following:
 
 > 2+3  
 ans = 5  
@@ -70,18 +71,20 @@ ans = 8
 Using Variables
 ---------------
 
-`% You can store results in variables and use them in calculations. Try the following:`
+```
+% You can store results in variables and use them in calculations. Try the following:
 
-> `> x = 2+3  
-> x = 5  
-> > x  
-> x = 5  
-> > y = 1+2  
-> y = 3  
-> > x*y  
-> ans = 15  
-> > z = x^y  
-> z = 125`
+> x = 2+3  
+x = 5  
+> x  
+x = 5  
+> y = 1+2  
+y = 3  
+> x*y  
+ans = 15  
+> z = x^y  
+z = 125
+```
 
 The Variable _ans_
 ------------------
