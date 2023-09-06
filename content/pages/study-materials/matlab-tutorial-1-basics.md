@@ -9,7 +9,6 @@ parent_uid: 895a4821-6cfe-cadf-afd6-973524d079f5
 title: 'MATLAB Tutorial 1: Basics'
 uid: c25a67a4-a6ed-1e83-77ef-a8b0dd820160
 ---
-
 Time
 ----
 
@@ -53,18 +52,19 @@ _Command lines_ begin with a '>'. When copying a command you should enter everyt
 MATLAB as a Calculator
 ----------------------
 
-`% The basic operations are *, +, -, /, ^. Try the following:`
+```% The basic operations are *, +, -, /, ^. Try the following:
 
-> `> 2+3  
-> ans = 5  
-> > 2*3   
-> ans = 6  
-> > 2/3  
-> ans = 0.66667  
-> > 2^3  
-> ans = 8  
-> > 2*(3+1)^2  
-> ans = 32`
+`> 2+3  
+ans = 5  
+> 2*3   
+ans = 6  
+> 2/3  
+ans = 0.66667  
+> 2^3  
+ans = 8  
+> 2*(3+1)^2  
+> ans = 32
+```
 
 Using Variables
 ---------------
