@@ -137,6 +137,7 @@ ans = 3.1416
 > sin(pi/2)  
 ans = 1
 ```
+
 ```
 % The exponential function is given by 'exp'.
 
@@ -175,27 +176,31 @@ x =
      1  2  3  4
 ```
 
-`% You turn rows into columns and vice-versa with a single quote after the bracket.`
+```
+% You turn rows into columns and vice-versa with a single quote after the bracket.
 
-> `> x = [1, 2, 3, 4]'  
-> x =  
->     1  
->     2  
->     3  
->     4`
+> x = [1, 2, 3, 4] 
+x =  
+    1  
+    2   
+    3  
+    4
+```
 
-`% Turning rows into columns is called transposing. In MATLAB we use a single quote. In mathematics we use a T, e.g. _A_{{< sup "T" >}}. You read this as 'A transpose'.`
+```
+% Turning rows into columns is called transposing. In MATLAB we use a single quote. In mathematics we use a T, e.g. _A_{{< sup "T" >}}. You read this as 'A transpose'.
 
-> `> y = [1, 2, 3; 4, 5, 6]  
-> y =  
->     1  2  3  
->     4  5  6`
-> 
-> `> y = [1, 2, 3; 4, 5, 6]'  
-> y =  
->     1  4  
->     2  5  
->     3  6`
+> y = [1, 2, 3; 4, 5, 6]  
+y =  
+     1  2  3  
+     4  5  6
+
+> y = [1, 2, 3; 4, 5, 6]
+y =  
+     1  4  
+     2  5  
+     3  6
+```
 
 `% If the entries are simple enough you can use spaces instead of commas between entries in a row. (You still need a semicolon between rows.)`
 
