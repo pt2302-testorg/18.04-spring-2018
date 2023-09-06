@@ -41,9 +41,10 @@ If you have a question ask one of the people seated next to you. There's a good 
 
 Conventions
 -----------
-
+```
 % This is an edited transcript of a MATLAB session.  
 % We've inserted comment lines, which begin with a '%'.
+```
 
 _Command lines_ begin with a '>'. When copying a command you should enter everything after the '>' and hit return. MATLAB's response will be shown in the line or lines below the command.
 
