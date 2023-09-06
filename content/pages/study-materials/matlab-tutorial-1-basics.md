@@ -100,6 +100,7 @@ ans = 22
 x = 22
 ```
 
+
 ```
 % Of course MATLAB changes the meaning of _ans_ the next time you don't name an expression.
 
@@ -166,9 +167,7 @@ ans =
 ans =
        1   2   3
        4   5   6
-
 ```
-
 
 ```
 % You can store arrays in variables.
