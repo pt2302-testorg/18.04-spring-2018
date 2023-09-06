@@ -54,7 +54,7 @@ MATLAB as a Calculator
 
 ```% The basic operations are *, +, -, /, ^. Try the following:
 
-`> 2+3  
+> 2+3  
 ans = 5  
 > 2*3   
 ans = 6  
