@@ -118,53 +118,62 @@ Functions
 
 MATLAB has all the functions you know and love.
 
-`% We'll start with functions on numbers.`
+```
+% We'll start with functions on numbers.
 
-> `> sin(1)  
-> ans = 0.84147  
-> > sin(1.4)  
-> ans = 0.98545  
-> > sin(3)  
-> ans = 0.14112`
+> sin(1)  
+ans = 0.84147  
+> sin(1.4)  
+ans = 0.98545  
+> sin(3)  
+ans = 0.14112
+```
 
-`% MATLAB knows about pi.`
+```
+% MATLAB knows about pi.
 
-> `> pi  
-> ans = 3.1416  
-> > sin(pi/2)  
-> ans = 1`
+> pi  
+ans = 3.1416  
+> sin(pi/2)  
+ans = 1
+```
+```
+% The exponential function is given by 'exp'.
 
-`% The exponential function is given by 'exp'.`
-
-> `> exp(0)  
-> ans = 1  
-> > exp(1)  
-> ans = 2.7183`
+> exp(0)  
+ans = 1  
+> exp(1)  
+ans = 2.7183
+```
 
 Arrays
 ------
 
-`% An array is the same thing as a matrix, i.e. a table of numbers. (MATLAB is short for Matrix Laboratory.)  
-% You create arrays by using square brackets. You put commas between the entries in rows and semicolons between the rows.`
+```
+% An array is the same thing as a matrix, i.e. a table of numbers. (MATLAB is short for Matrix Laboratory.)  
+% You create arrays by using square brackets. You put commas between the entries in rows and semicolons between the rows.
 
-`% 1 x 4 array`
+% 1 x 4 array
 
-> `> [1, 2, 3, 4]  
-> ans =  
->       1   2   3   4`
+> [1, 2, 3, 4]  
+ans =  
+       1   2   3   4
 
-`% 2 x 3 array`
+% 2 x 3 array
 
-> `> [1, 2, 3; 4, 5, 6]  
-> ans =  
->       1   2   3  
->       4   5   6`
+> [1, 2, 3; 4, 5, 6]  
+ans =  
+       1   2   3  
+       4   5   6
+```
 
-`% You can store arrays in variables.`
+```
+% You can store arrays in variables.
 
-> `> x = [1, 2, 3, 4]  
-> x =  
->     1  2  3  4`
+> x = [1, 2, 3, 4]  
+x =  
+     1  2  3  4
+```
 
 `% You turn rows into columns and vice-versa with a single quote after the bracket.`
 
