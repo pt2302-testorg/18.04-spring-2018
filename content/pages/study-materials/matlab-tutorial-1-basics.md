@@ -65,7 +65,7 @@ ans = 0.66667
 > 2^3  
 ans = 8  
 > 2*(3+1)^2  
-> ans = 32
+ans = 32
 ```
 
 Using Variables
@@ -89,25 +89,29 @@ z = 125
 The Variable _ans_
 ------------------
 
-`% If you don't name an expression MATLAB names it _ans_ for you. This is useful if you forget to name something.`
+```
+% If you don't name an expression MATLAB names it _ans_ for you. This is useful if you forget to name something.
 
-> `> 7+15  
-> ans = 22  
-> > ans  
-> ans = 22  
-> > x = ans  
-> x = 22`
+> 7+15  
+ans = 22  
+> ans  
+ans = 22  
+> x = ans  
+x = 22
+```
 
-`% Of course MATLAB changes the meaning of _ans_ the next time you don't name an expression.`
+```
+% Of course MATLAB changes the meaning of _ans_ the next time you don't name an expression.
 
-> `> 7+15  
-> ans = 22  
-> > ans  
-> ans = 22  
-> > 9 + 2  
-> ans = 11  
-> > x = ans  
-> x = 11`
+> 7+15  
+ans = 22  
+> ans  
+ans = 22  
+> 9 + 2  
+ans = 11  
+> x = ans  
+x = 11
+```
 
 Functions
 ---------
