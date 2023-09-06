@@ -255,6 +255,7 @@ Matrix Arithmetic
 > x = [1, 2, 3]
 x =
      1  2  3
+
 > y = [4, 5, 6]
 y =
      4  5  6
@@ -347,7 +348,7 @@ ans =
  ans =
      914.31  911.60
      182.32  185.04
- ```
+```
 
 ```
 % See what happens if the matrix is not square.
@@ -399,219 +400,247 @@ Sometimes you want to raise each element of an array to a power. The notation is
      32  50  72
 ```
 
-`% Also to raise each element of an array to the same element in another array.`
+```
+% Also to raise each element of an array to the same element in another array.
 
-> `> [2, 2, 2, 2, 2] .^ [1, 2, 3, 4, 5]
-> ans =
->     2  4  8  16  32`
+> [2, 2, 2, 2, 2] .^ [1, 2, 3, 4, 5]
+ ans =
+     2  4  8  16  32
 
-`% Example: find the sum of the squares of the integers from 1 to 1024.`
+% Example: find the sum of the squares of the integers from 1 to 1024.
 
-> `> x = [1:1024];
-> > sum(x.^2)
-> ans = 358438400`
+> x = [1:1024];
+> sum(x.^2)
+ans = 358438400
 
-`% This can be done in one command.`
+% This can be done in one command.
 
-> `> sum([1:1024].^2)
-> ans = 358438400`
+> sum([1:1024].^2)
+ans = 358438400
+```
 
 Some Standard Array Operations
 ------------------------------
 
 Here we will learn to find the determinant and inverse of a square array and the reduced row echelon form and rank of any array.
 
-`% Check each of the following computations.`
+```
+% Check each of the following computations.
 
-> `> A = [6 5; 1 2]
-> A =
->     6  5
->     1  2`
+> A = [6 5; 1 2]
+A =
+     6  5
+     1  2
 
-`% Determinant`
+% Determinant
 
-> `> det(A)
-> ans = 7`
+> det(A)
+ans = 7
 
-`% Inverse`
+% Inverse
 
-> `> inv(A)
-> ans =
->      0.2857  -0.7143
->     -0.1429   0.8571`
+> inv(A)
+ans =
+      0.2857  -0.7143
+     -0.1429   0.8571
 
-`% Another way to find inverses.`
+% Another way to find inverses.
 
-> `> A^(-1)
-> ans =
->      0.2857  -0.7143
->     -0.1429   0.8571`
+A^(-1)
+ans =
+      0.2857  -0.7143
+     -0.1429   0.8571
+```
 
-`% Solving systems. Example: Solve the system: 
-    6x + 5y = 4`
- `x + 2y = 7`
+```
+% Solving systems. Example: Solve the system: 
+%   6x + 5y = 4
+%    x + 2y = 7
 
-`% We solve this using matrix methods:`
+% We solve this using matrix methods:
 
-`% The coefficient matrix is our matrix A. Note the prime on the array in the next command.`
+% The coefficient matrix is our matrix A. Note the prime on the array in the next command.
 
-> `> solution = A^(-1)*[4, 7]'
-> ans =
->     -3.8571
->      5.4286`
+> solution = A^(-1)*[4, 7]
+ans =
+     -3.8571
+      5.4286
 
-`% Solving systems is so important MATLAB has another, better way of doing this.`
+% Solving systems is so important MATLAB has another, better way of doing this.
 
-> `> solution = A\[4 7]'
-> ans =
->     -3.8571
->      5.4286`
+> solution = A\[4 7]
+ans =
+     -3.8571
+      5.4286
 
-`% Reduced row echelon form`
+% Reduced row echelon form
 
-> `> rref(A)
-> ans =
->     1  0
->     0  1`
+> rref(A)
+ans =
+     1  0
+     0  1
+```
 
-`% That was too simple. Here's another example.`
+```
+% That was too simple. Here's another example.
 
-> `> B = [1 2 3; 4 5 6; 7 8 9]
-> B =
->     1  2  3
->     4  5  6
->     7  8  9`
->
-> `> rref(B)
-> ans =
->     1  0  -1
->     0  1   2
->     0  0   0`
+> B = [1 2 3; 4 5 6; 7 8 9]
+B =
+     1  2  3
+     4  5  6
+     7  8  9
 
-`% Rank of a matrix`
+> rref(B)
+ans =
+     1  0  -1
+     0  1   2
+     0  0   0
+```
 
-> `> rank(A)
-> ans = 2
-> > rank(B)
-> ans = 2`
+```
+% Rank of a matrix
+
+> rank(A)
+ans = 2
+
+> rank(B)
+ans = 2
+```
 
 Creating Special Arrays
 -----------------------
 
-`% [3:1:10] is the array from 3 to 10 counting by 1.`
+```
+% [3:1:10] is the array from 3 to 10 counting by 1.
 
-> `> x = [3:1:10]`
-> `x =
->     3  4  5  6  7  8  9  10`
+> x = [3:1:10]
+x =
+     3  4  5  6  7  8  9  10
 
-`% Changing the 1 to 2 means count by 2's.`
+% Changing the 1 to 2 means count by 2's.
 
-> `> x = [3:2:10]
-> x =
->     3  5  7  9`
+> x = [3:2:10]
+x =
+     3  5  7  9
 
-`% You can count by any number.`
+% You can count by any number.
 
-> `> x = [3:1.8:10]
-> x =
->     3.0000  4.8000  6.6000  8.4000`
+> x = [3:1.8:10]
+x =
+     3.0000  4.8000  6.6000  8.4000
 
-`% For counting by 1's, you can leave out the middle number.`
+% For counting by 1's, you can leave out the middle number.
 
-> `> x = [3:10]
-> x =
->     3  4  5  6  7  8  9  10`
+> x = [3:10]
+x =
+     3  4  5  6  7  8  9  10
+```
 
 ### Suppressing Output to the Screen
 
-`% For large arrays you'll want to suppress output to the screen.
+```
+% For large arrays you'll want to suppress output to the screen.
 % You do this by putting a semicolon at the end of the line.
-% We'll demonstrate on small arrays so you can see what happens.`
+% We'll demonstrate on small arrays so you can see what happens.
 
-`% No semicolon (have output)`
+% No semicolon (have output)
 
-> `> x = [1:2:9]
-> x=
->     1  3  5  7  9`
+> x = [1:2:9]
+x =
+    1  3  5  7  9
 
-`% With semicolon (no output)`
+% With semicolon (no output)
 
-> `> x = [1:2:9];
-> > y = 2*x;`
->
-> `> z = 2*x & no semicolon, yes output
-> z =
->     2  6  10  14  18`
+> x = [1:2:9];
+> y = 2*x;
 
-`% If you forget the semicolon you can stop the screen output by typing a q followed by return. Try this with the following command:`
+> z = 2*x % no semicolon, yes output
+z =
+     2  6  10  14  18
 
-> `> [1:1000]`
+% If you forget the semicolon you can stop the screen output by typing a q followed by return. Try this with the following command:
+
+> [1:1000]
+```
 
 Functions on Arrays
 -------------------
 
 Most functions can be used on arrays.
 
-`% We'll start with functions on numbers.`
+```
+% We'll start with functions on numbers.
 
-`% Sin acts on arrays by taking the sin of each element.`
+% Sin acts on arrays by taking the sin of each element.
 
-> `> x = [1, 2, 3; 4, 5, 6]
-> x =
->     1  2  3
->     4  5  6`
->
-> `> sin(x)
-> ans =
->     0.84147   0.90930   0.14112`
->  `-0.75680  -0.95892  -0.27942`
+> x = [1, 2, 3; 4, 5, 6]
+x =
+     1  2  3
+     4  5  6
 
-`% exp also acts on arrays.`
+> sin(x)
+ans =
+     0.84147   0.90930   0.14112
+    -0.75680  -0.95892  -0.27942
+```
 
-> `> exp(x)
-> ans =
->      2.7183    7.3891   20.0855
->     54.5982  148.4132  403.4288`
+```
+% exp also acts on arrays.
+
+> exp(x)
+ans =
+      2.7183    7.3891   20.0855
+     54.5982  148.4132  403.4288
+```
 
 MATLAB Sums the Elements of Arrays
 ----------------------------------
 
 We don't need it just yet, but the _sum_ function will be quite useful.
 
-`% For a single row or column _sum_ adds them up.`
+```
+% For a single row or column _sum_ adds them up.
 
-> `> x = [1,2,3];
-> x =
->     1  2  3
-> > sum(x)
-> ans = 6`
->
-> `> y = x'
-> y =
->     1
->     2
->     3
-> > sum(y)
-> ans = 6`
+> x = [1,2,3];
+x =
+     1  2  3
 
-`% Find the sum of the first 1000 integers.`
+> sum(x)
+ans = 6
 
-> `> sum([1:1000])
-> ans = 500500`
+> y = x
+y =
+     1
+     2
+     3
 
-`% Find the sum of the squares of the first 1000 integers.`
+> sum(y)
+ans = 6
+```
 
-> `> sum([1:1000].^2)
-> ans = 333833500`
+```
+% Find the sum of the first 1000 integers.
 
-`% For a two dimensional array _sum_ produces the sum of each of the columns.`
+> sum([1:1000])
+ans = 500500
 
-> `> x = [1, 2, 3, 4, 5; 7, 9, 11, 13, 15]
-> x =
->     1  2   3   4   5
->     7  9  11  13  15
-> > sum(x)
-> ans =
->     8  11  14  17  20`
+% Find the sum of the squares of the first 1000 integers.
 
-`% Note the result is summing a 2x5 array is a 1x5 array.`
+> sum([1:1000].^2)
+ans = 333833500
+```
+
+```
+% For a two dimensional array _sum_ produces the sum of each of the columns.
+
+> x = [1, 2, 3, 4, 5; 7, 9, 11, 13, 15]
+x =
+     1  2   3   4   5
+     7  9  11  13  15
+
+> sum(x)
+ans =
+     8  11  14  17  20
+
+% Note the result is summing a 2x5 array is a 1x5 array.
+```
