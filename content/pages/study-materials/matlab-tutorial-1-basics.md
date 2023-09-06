@@ -166,6 +166,7 @@ ans =
 ans =  
        1   2   3  
        4   5   6
+
 ```
 
 ```
@@ -202,125 +203,140 @@ y =
      3  6
 ```
 
-`% If the entries are simple enough you can use spaces instead of commas between entries in a row. (You still need a semicolon between rows.)`
+```
+% If the entries are simple enough you can use spaces instead of commas between entries in a row. (You still need a semicolon between rows.)
 
-> `> x = [1 2 3; 4 5 6]  
-> x =  
->     1  2  3  
->     4  5  6`
+> x = [1 2 3; 4 5 6]  
+x =  
+     1  2  3  
+     4  5  6
+```
 
 Accessing entries in an array
 -----------------------------
 
-`% Arrays are accessed with the notation A(row,col).`
+```
+% Arrays are accessed with the notation A(row,col).
 
-> `> A = [1, 2, 3; 4, 5, 6]  
-> A =  
->     1  2  3  
->     4  5  6`
-> 
-> `> A(1,1)  
-> ans = 1  
-> > A(2,1)   
-> ans = 4  
-> > A(2,3)   
-> ans = 6`
+> A = [1, 2, 3; 4, 5, 6]  
+A =  
+     1  2  3  
+     4  5  6
+ 
+> A(1,1)  
+ans = 1  
+> A(2,1)   
+ans = 4  
+> A(2,3)   
+ans = 6
+```
 
-`% For one dimensional arrays you only need one index.` 
+```
+% For one dimensional arrays you only need one index.
 
-> `> x = [1, 2, 3, 4, 5]  
-> x =  
->     1  2  3  4  5  6`
-> 
-> `> x(1)  
-> ans = 1  
-> > x(4)  
-> ans = 4`
+> x = [1, 2, 3, 4, 5]  
+x =  
+     1  2  3  4  5  6
+ 
+> x(1)  
+ans = 1  
+> x(4)  
+ans = 4
+```
 
 Matrix Arithmetic
 -----------------
 
-`% You can add or subtract matrices (arrays) of _the same size._`
+```
+% You can add or subtract matrices (arrays) of _the same size._
 
-> `> x = [1, 2, 3]  
-> x =  
->     1  2  3`
-> 
-> `> y = [4, 5, 6]`  
-> `y =  
->     4  5  6`
-> 
-> `> x + y  
-> ans =  
->     5  7  9`
-> 
-> `> x = [1 2; 3 4]  
-> x =  
->     1  2  
->     3  4`
-> 
-> `> x + [6, 5; 1, 2]  
-> ans =  
->     7  7  
->     4  6`
+> x = [1, 2, 3]  
+x =  
+     1  2  3
+> y = [4, 5, 6] 
+y =  
+     4  5  6
+ 
+> x + y  
+ans =  
+     5  7  9
 
-`% You can scale or divide matrices by a number.`
+> x = [1 2; 3 4]  
+x =  
+     1  2  
+     3  4
 
-> `> x = [1, 2, 3]  
-> x =  
->     1  2  3` 
-> 
-> `> 2*x  
-> ans =  
->     2  4  6`
-> 
-> `> x/2  
-> ans =  
->     0.50000  1.00000  1.50000`
+> x + [6, 5; 1, 2]  
+ans =  
+     7  7  
+     4  6
+```
 
-`% You can multiply compatibly sized matrices.  
-% 3x2 times 2x4 is 3x4.`
+```
+% You can scale or divide matrices by a number.
 
-> `> A = [1 2; 3 4; 5 6]  
-> A =  
->     1  2  
->     3  4  
->     5  6`
-> 
-> `> B = [1 2 3 4; 5 6 7 8]  
-> B =  
->     1  2  3  4  
->     5  6  7  8`
-> 
-> `> A*B  
-> ans =  
->     11  14  17  20  
->     23  30  37  44  
->     35  46  57  68`
+> x = [1, 2, 3]  
+ x =  
+     1  2  3
 
-`% If the sizes aren't compatible you get an error message.`
+> 2*x  
+ ans =  
+     2  4  6
+ 
+> x/2  
+ ans =  
+     0.50000  1.00000  1.50000
+```
 
-> `> A*A  
-> Error using *  
-> Inner matrix dimensions must agree.`
+```
+% You can multiply compatibly sized matrices.  
+% 3x2 times 2x4 is 3x4.
 
-`% You can raise square matrices to powers.  
-% Try the following:`
+> A = [1 2; 3 4; 5 6]  
+ A =  
+     1  2  
+     3  4  
+     5  6
 
-> `> A = [6, 5; 1, 2]  
-> A =  
->     6  5  
->     1  2`
-> 
-> `> A^2  
-> ans =`  
->  `41  40  
->      8   9`
-> 
-> `> A^3  
-> ans =  
->     286  285  
->      57   58`
+> B = [1 2 3 4; 5 6 7 8]  
+ B =  
+     1  2  3  4  
+     5  6  7  8
+
+> A*B  
+ ans =  
+     11  14  17  20  
+     23  30  37  44  
+     35  46  57  68
+```
+
+```
+% If the sizes aren't compatible you get an error message.
+
+> A*A  
+ Error using *  
+ Inner matrix dimensions must agree.
+```
+
+```
+% You can raise square matrices to powers.  
+% Try the following:
+
+> A = [6, 5; 1, 2]  
+ A =  
+     6  5  
+     1  2
+
+> A^2  
+ans =  
+  41  40  
+  8   9
+
+> A^3  
+ans =  
+     286  285  
+     57   58
+```
 
 `% Given how much we love exponentials it's nice that MATLAB can compute the exponential of a square matrix.`
 
