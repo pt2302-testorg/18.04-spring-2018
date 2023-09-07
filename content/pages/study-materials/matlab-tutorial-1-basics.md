@@ -642,5 +642,5 @@ x =
 ans =
      8  11  14  17  20
 
-% Note the result is summing a 2x5 array is a 1x5 array.
+% Note the result of summing a 2x5 array is a 1x5 array.
 ```
